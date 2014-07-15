@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+
+namespace Spin
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int w = 0;
+            int d = 0;
+            // 0 = |
+            // 1 = /
+            // 2 = -
+            // 3 = \
+
+            for (int a = 0; a < 401; a++)
+            {
+                Console.Clear();
+                if (d == 0)
+                    Console.Write("|");
+                else if (d == 1)
+                    Console.Write("/");
+                else if (d == 2)
+                    Console.Write("-");
+                else if (d == 3)
+                    Console.Write("\\");
+                else
+                    Console.Write("That's all for now.");
+                d++;
+                if (d == 4)
+                    d = 0;
+
+                Console.WriteLine("\n\nd = " + d + "\na =" + a + "\\400");
+                Thread.Sleep(125);
+                }
+
+            Console.Clear();
+            Console.Write("That is all for now.");
+            Console.ReadLine();
+            
+        }
+    }
+}
