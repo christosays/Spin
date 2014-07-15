@@ -10,8 +10,7 @@ namespace Spin
     {
         static void Main(string[] args)
         {
-            int w = 0;
-            int d = 0;
+            int line = 0;
             // 0 = |
             // 1 = /
             // 2 = -
@@ -20,21 +19,21 @@ namespace Spin
             for (int a = 0; a < 401; a++)
             {
                 Console.Clear();
-                if (d == 0)
+                if (line == 0)
                     Console.Write("|");
-                else if (d == 1)
+                else if (line == 1)
                     Console.Write("/");
-                else if (d == 2)
+                else if (line == 2)
                     Console.Write("-");
-                else if (d == 3)
+                else if (line == 3)
                     Console.Write("\\");
                 else
                     Console.Write("That's all for now.");
-                d++;
-                if (d == 4)
-                    d = 0;
+                line++;
+                if (line == 4)
+                    line = 0;
 
-                Console.WriteLine("\n\nd = " + d + "\na =" + a + "\\400");
+                Console.WriteLine("\n\nd = " + line + "\na =" + a + "\\400");
                 Thread.Sleep(125);
                 }
 
