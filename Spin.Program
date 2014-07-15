@@ -10,7 +10,7 @@ namespace Spin
     {
         static void Main(string[] args)
         {
-            int line = 0;
+            int disLine = 0;
             // 0 = |
             // 1 = /
             // 2 = -
@@ -19,27 +19,27 @@ namespace Spin
             for (int a = 0; a < 401; a++)
             {
                 Console.Clear();
-                if (line == 0)
+                if (disLine == 0)
                     Console.Write("|");
-                else if (line == 1)
+                else if (disLine == 1)
                     Console.Write("/");
-                else if (line == 2)
+                else if (disLine == 2)
                     Console.Write("-");
-                else if (line == 3)
+                else if (disLine == 3)
                     Console.Write("\\");
                 else
                     Console.Write("That's all for now.");
-                line++;
-                if (line == 4)
-                    line = 0;
+                disLine++;
+                if (disLine == 4)
+                    disLine = 0;
 
-                Console.WriteLine("\n\nd = " + line + "\na =" + a + "\\400");
+                Console.WritedisLine("\n\nd = " + disLine + "\na =" + a + "\\400");
                 Thread.Sleep(125);
                 }
 
             Console.Clear();
             Console.Write("That is all for now.");
-            Console.ReadLine();
+            Console.ReaddisLine();
             
         }
     }
